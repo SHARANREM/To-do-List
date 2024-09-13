@@ -199,11 +199,17 @@ body::-webkit-scrollbar-thumb:hover {
   outline: none;
 }
 @media all and (max-width:425px){
+  .AddingSection{
+    margin-bottom: 15px;
+  }
+  .AddingSection h1{
+    font-size: 2em;
+  }
   .tasks{
     max-height: 400px;
   }
   .AddingSection button{
-    width: 25%;
+    width: 30%;
   }
   .AddingSection input{
     width: 50%;
@@ -213,9 +219,26 @@ body::-webkit-scrollbar-thumb:hover {
   }
   .tasks li h6{
     font-size: 0.6em;
+    
+    width: 20%;
+    display: block;
+    position: relative;
+    left: 6px;
+  }
+  .tasks li span{
+    width: 40%;
+  }
+  .tasks li button{
+    
+    margin-right: 6px;
+    width: 30px;
+    height: 30px;
   }
 }
 @media all and (max-width:375px){
+  .AddingSection h1{
+    font-size: 2em;
+  }
   .tasks{
     max-height: 220px;
   }
@@ -230,6 +253,9 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 @media all and (max-width:320px){
+  .AddingSection h1{
+    font-size: 2em;
+  }
   .tasks{
     max-height: 130px;
   }
