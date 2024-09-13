@@ -4,9 +4,27 @@
   margin: 0;
 }
 body{
-  background-image: url("./assets/like.jpg");
+  background-color: black;
+  background-image: url("./assets/asds.jpeg");
   background-size: cover;
-  background-repeat: no-repeat;
+}
+body::-webkit-scrollbar {
+  width: 20px;  
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.363);
+  border-radius: 10px; 
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px; 
+  border: 2px solid rgb(0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.432); 
 }
 .AddingSection{
   background-color: rgba(255, 255, 255, 0);
@@ -57,12 +75,12 @@ body{
   padding: 10px;
 }
 .tasks{
-  background-color: rgba(255, 255, 255, 0.048);
   width: 80%;
   border-radius: 20px;
+  background-color: rgba(245, 245, 245, 0.445);
   margin: 20px auto auto auto;
   padding: 20px;
-  max-height: 470px; /* Set a maximum height */
+  max-height: 450px;
   overflow-y: auto;
 }
 
@@ -71,68 +89,159 @@ body{
 }
 
 .tasks::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.034);
+  background: rgba(255, 255, 255, 0.363);
   border-radius: 10px; 
 }
 
 .tasks::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.068);
+  background-color: rgb(255, 255, 255);
   border-radius: 10px; 
-  border: 2px solid rgba(0, 0, 0, 0.2);
+  border: 2px solid rgb(0, 0, 0);
 }
 
 .tasks::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 255, 255, 0.8); 
+  background-color: rgba(0, 0, 0, 0.432); 
 }
 
 .tasks h3{
   color: white;
   text-align: center;
   font-size: 1.5em;
+  
   margin-bottom: 10px;
   text-shadow: 5px 5px 5px black;
 }
 .tasks li{
   margin-bottom: 10px;
-  background-color: rgba(255, 255, 255, 0.089);
+  background-color: rgba(0, 0, 0, 0.74);
   list-style: none;
-  height: 50px;
-  color: white;
+  color: rgb(255, 255, 255);
   border-radius: 15px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   padding: 10px;
   transition: .2s ease-in;
   box-shadow: 0px 0px 5px black;
-  justify-content: space-between;
+  justify-content: space-between; 
+  word-wrap: break-word; 
+  min-height: 50px; 
 }
 .tasks li:hover{
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.932);
+  color: black;
+}
+
+.tasks li:hover button{
   color: black;
 }
 .tasks li span{
   background-color: transparent;
   align-self: center;
-  font-size: 2em;
-  width: 90%;
-  overflow:hidden;
-  padding-top: 20px;
-  padding-left: 50px;
-  justify-self: center;
+  font-size: 1.2em; 
+  width: 70%;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  padding-left: 10px;
+  justify-self: flex-start;
 }
 .tasks li h6{
-  font-size: 0.45em;
+  font-size: 0.8em; 
+  white-space: wrap;
   text-align: end;
+  margin-left: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+  justify-self: flex-end;
+  align-self: flex-end;
 }
 .tasks li button{
   width: 5%;
-  font-size: 2em;
+  height: 50px;
+  color: white;
+  font-size: 1.5em;
   text-align: center;
   background-color: transparent;
   border-radius: 50%;
   border: none;
   transition: .2s ease;
+  margin-left: 10px;
 }
 .tasks li button:hover{
-  background-color: rgb(231, 231, 231);
+  background-color: rgba(0, 0, 0, 0.11);
+}
+.fS{
+  text-align: center;
+  color: white;
+}
+.fS label{
+  font-size: 1.3em;
+  background-color: rgba(255, 255, 255, 0.329);
+  padding: 12px;
+  border-top-right-radius: 23px;
+  border-bottom-left-radius: 23px;
+  transition: .3s ease;
+}
+.fS label:hover{
+  background-color: white;
+  color: black;
+}
+.fS select{
+  background-color: black;
+  color: white;
+  margin-left: 10px;
+  width: 17%;
+  height: 40px;
+  padding-left: 6px;
+  font-size: 1.1em;
+  border-radius: 10px;
+  border: 2px dashed white;
+  outline: none;
+}
+@media all and (max-width:425px){
+  .tasks{
+    max-height: 400px;
+  }
+  .AddingSection button{
+    width: 25%;
+  }
+  .AddingSection input{
+    width: 50%;
+  }
+  .fS select{
+    width: 30%;
+  }
+  .tasks li h6{
+    font-size: 0.6em;
+  }
+}
+@media all and (max-width:375px){
+  .tasks{
+    max-height: 220px;
+  }
+  .AddingSection button{
+    width: 30%;
+  }
+  .AddingSection input{
+    width: 60%;
+  }
+  .fS select{
+    width: 35%;
+  }
+}
+@media all and (max-width:320px){
+  .tasks{
+    max-height: 130px;
+  }
+  .AddingSection button{
+    width: 35%;
+    margin: -10px;
+  }
+  .AddingSection input{
+    width: 60%;
+  }
+
+  .fS select{
+    width: 40%;
+  }
 }
